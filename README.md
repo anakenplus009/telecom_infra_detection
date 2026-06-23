@@ -7,9 +7,9 @@ flowchart LR
     %% ==========================================
     %% 1. オーケストレーション層（最上部で全体の流れを制御）
     %% ==========================================
-    subgraph Orchestration ["【制御フロー】 オーケストレーション (Apache Airflow)"]
+    subgraph Orchestration ["【制御フロー】 オーケストレーション (Step Functions)"]
         direction LR
-        af_main{{"Apache Airflow"}}:::airflow
+        af_main{{"Step Functions"}}:::airflow
         af_t1["1. データの検知・取得タスク"]:::af_task
         af_t2["2. Auroraへのロードタスク"]:::af_task
         af_t3["3. 空間結合・集計バッチ実行"]:::af_task
